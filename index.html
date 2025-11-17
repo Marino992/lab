@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Otaku Lab</title>
+<link rel="icon" href="marino1.png">
+
+<style>
+
+/* ----- RESET ----- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('CREATIVE.png');
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* ----- TITOLI ----- */
+h1 {
+    color: #0d3b66;
+    font-size: 3em;
+    margin: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+h1 img {
+    height: 2em;
+}
+
+h2 {
+    color: #0d3b66;
+    font-size: 2em;
+    margin-top: -10px;
+    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.2);
+}
+
+/* ----- BOTTONI ----- */
+.btn {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 25px;
+    background: #1abc9c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background: #16a085;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+/* ----- IMMAGINE CENTRALE ----- */
+.circle-img {
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 30%;
+    max-width: 250px;
+    height: auto;
+}
+
+/* ----- LINK MODERNO ----- */
+.modern-link {
+    font-size: 2em;
+    color: #0d3b66;
+    text-decoration: none;
+    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.modern-link:hover {
+    color: #1abc9c;
+    transform: scale(1.05);
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 600px) {
+
+  h1 { font-size: 2.2em; }
+  h1 img { height: 1.5em; }
+
+  h2 { font-size: 1.6em; }
+
+  .btn {
+      padding: 10px 20px;
+      font-size: 1em;
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+  }
+
+  .circle-img {
+      width: 60%;
+  }
+
+  .modern-link {
+      font-size: 1.5em;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<h1>
+  <img src="marino1.png" alt="logo">
+  CREATIVE OTAKU LAB
+</h1>
+
+<h2>Rendi i tuoi sogni tangibili</h2>
+
+<div>
+  <a href="creative1.html" class="btn" target="_blank">Chi siamo</a>
+  <a href="niente.html" class="btn" target="_blank">I nostri prodotti</a>
+  <a href="scuse.html" class="btn" target="_blank">I mercatini</a>
+  <a href="creative2.html" class="btn" target="_blank">Galleria</a>
+</div>
+
+<div>
+  <img src="marino2.png" class="circle-img" alt="immagine profilo">
+</div>
+
+<hr style="margin-top: 30px;">
+
+<div>
+  <a href="https://www.vinted.it/member/122779294" target="_blank" class="modern-link">
+    Cercaci su VINTED
+  </a>
+</div>
+
+<p>Hai visitato questo sito <span id="visits">0</span> volte.</p>
+
+<script>
+let visits = localStorage.getItem("visits") || 0;
+visits++;
+localStorage.setItem("visits", visits);
+document.getElementById("visits").textContent = visits;
+</script>
+
+</body>
+</html>
